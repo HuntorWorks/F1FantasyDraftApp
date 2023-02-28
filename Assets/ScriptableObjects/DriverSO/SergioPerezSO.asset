@@ -17,3 +17,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: 1694217e519ce2148baa1f48ec657bbc, type: 3}
   driverNumber: 11
   driverNationality: {fileID: 21300000, guid: 5cee5973655b7a446bee0390bf5cf2bc, type: 3}
+  team: RedBull

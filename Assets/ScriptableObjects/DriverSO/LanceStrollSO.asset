@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22f7902873ca2a046b9d89e6e8756195, type: 3}
-  m_Name: MaxVerstappenSO
+  m_Name: LanceStrollSO
   m_EditorClassIdentifier: 
-  driverName: Max Verstappen
-  driverPrice: 26.9
-  driverPortrait: {fileID: 21300000, guid: 77ba2af0420182c47aae1900a309764d, type: 3}
-  driverNumber: 1
-  driverNationality: {fileID: 21300000, guid: 270609de526484c48ac1d8a15bf9ba55, type: 3}
-  team: RedBull
+  driverName: Lance Stroll
+  driverPrice: 7.5
+  driverPortrait: {fileID: 21300000, guid: 2741ed4be199b874e87d3f592a40e4ee, type: 3}
+  driverNumber: 18
+  driverNationality: {fileID: 21300000, guid: df9bf8d249184a34ca66c17441b7452a, type: 3}
+  team: AstonMartin

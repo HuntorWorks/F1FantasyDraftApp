@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22f7902873ca2a046b9d89e6e8756195, type: 3}
-  m_Name: MaxVerstappenSO
+  m_Name: ValtteriBottasSO
   m_EditorClassIdentifier: 
-  driverName: Max Verstappen
-  driverPrice: 26.9
-  driverPortrait: {fileID: 21300000, guid: 77ba2af0420182c47aae1900a309764d, type: 3}
-  driverNumber: 1
-  driverNationality: {fileID: 21300000, guid: 270609de526484c48ac1d8a15bf9ba55, type: 3}
-  team: RedBull
+  driverName: Valtteri Bottas
+  driverPrice: 7.8
+  driverPortrait: {fileID: 21300000, guid: 26f8a140d4b277246b011bf3a8e532c3, type: 3}
+  driverNumber: 77
+  driverNationality: {fileID: 21300000, guid: 6e24857e0fc8d88469d8f14d000cd6b2, type: 3}
+  team: AlfaRomeo

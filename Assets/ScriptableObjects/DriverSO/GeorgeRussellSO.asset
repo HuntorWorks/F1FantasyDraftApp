@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22f7902873ca2a046b9d89e6e8756195, type: 3}
-  m_Name: MaxVerstappenSO
+  m_Name: GeorgeRussellSO
   m_EditorClassIdentifier: 
-  driverName: Max Verstappen
-  driverPrice: 26.9
-  driverPortrait: {fileID: 21300000, guid: 77ba2af0420182c47aae1900a309764d, type: 3}
-  driverNumber: 1
-  driverNationality: {fileID: 21300000, guid: 270609de526484c48ac1d8a15bf9ba55, type: 3}
-  team: RedBull
+  driverName: GeorgeRussell
+  driverPrice: 18.6
+  driverPortrait: {fileID: 21300000, guid: 3096efb391e9ca84791049be58bcf179, type: 3}
+  driverNumber: 63
+  driverNationality: {fileID: 21300000, guid: a4633f52e86e3b74497d8855ba08d13e, type: 3}
+  team: Mercedes

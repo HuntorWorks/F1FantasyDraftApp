@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22f7902873ca2a046b9d89e6e8756195, type: 3}
-  m_Name: MaxVerstappenSO
+  m_Name: CarlosSainsSO
   m_EditorClassIdentifier: 
-  driverName: Max Verstappen
-  driverPrice: 26.9
-  driverPortrait: {fileID: 21300000, guid: 77ba2af0420182c47aae1900a309764d, type: 3}
-  driverNumber: 1
-  driverNationality: {fileID: 21300000, guid: 270609de526484c48ac1d8a15bf9ba55, type: 3}
-  team: RedBull
+  driverName: Carlos Sainz
+  driverPrice: 17.2
+  driverPortrait: {fileID: 21300000, guid: 08051ed0baad0574c88decd55b19104c, type: 3}
+  driverNumber: 55
+  driverNationality: {fileID: 21300000, guid: 971218cddd4d7ff4a9b60edf468d7440, type: 3}
+  team: Ferrari

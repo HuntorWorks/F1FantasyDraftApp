@@ -9,5 +9,6 @@ public class DriverSO : ScriptableObject {
     public float driverPrice;
     public Sprite driverPortrait;
     public int driverNumber;
-    public Sprite driverNationality; 
+    public Sprite driverNationality;
+    public string team; 
 }
