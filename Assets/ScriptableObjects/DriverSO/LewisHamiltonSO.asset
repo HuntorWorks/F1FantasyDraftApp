@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22f7902873ca2a046b9d89e6e8756195, type: 3}
+  m_Script: {fileID: 11500000, guid: 529abf08d14dba844bbb81a8e27731e4, type: 3}
   m_Name: LewisHamiltonSO
   m_EditorClassIdentifier: 
   driverName: Lewis Hamilton
+  driverNumber: 44
   driverPrice: 23.7
   driverPortrait: {fileID: 21300000, guid: e584a15b03f736f49af9bc8e9f6278d2, type: 3}
-  driverNumber: 44
   driverNationality: {fileID: 21300000, guid: a4633f52e86e3b74497d8855ba08d13e, type: 3}
   team: Mercedes

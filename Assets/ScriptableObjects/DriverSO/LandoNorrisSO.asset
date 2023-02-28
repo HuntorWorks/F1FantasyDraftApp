@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22f7902873ca2a046b9d89e6e8756195, type: 3}
+  m_Script: {fileID: 11500000, guid: 529abf08d14dba844bbb81a8e27731e4, type: 3}
   m_Name: LandoNorrisSO
   m_EditorClassIdentifier: 
   driverName: Lando Norris
+  driverNumber: 4
   driverPrice: 11.2
   driverPortrait: {fileID: 21300000, guid: b88bea78686b32545be66a09882d6abb, type: 3}
-  driverNumber: 4
   driverNationality: {fileID: 21300000, guid: a4633f52e86e3b74497d8855ba08d13e, type: 3}
   team: Mclaren

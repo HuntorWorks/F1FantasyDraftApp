@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22f7902873ca2a046b9d89e6e8756195, type: 3}
+  m_Script: {fileID: 11500000, guid: 529abf08d14dba844bbb81a8e27731e4, type: 3}
   m_Name: ZhouGuanyuSO
   m_EditorClassIdentifier: 
   driverName: Zhou Guanyu
+  driverNumber: 24
   driverPrice: 4.9
   driverPortrait: {fileID: 21300000, guid: be1394536528aa841a47af89a1efd308, type: 3}
-  driverNumber: 24
   driverNationality: {fileID: 21300000, guid: a1a9540846a756d49bccbf694e522e34, type: 3}
   team: AlfaRomeo

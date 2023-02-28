@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22f7902873ca2a046b9d89e6e8756195, type: 3}
+  m_Script: {fileID: 11500000, guid: 529abf08d14dba844bbb81a8e27731e4, type: 3}
   m_Name: NicoHulkenbergSO
   m_EditorClassIdentifier: 
   driverName: Nico Hulkenberg
+  driverNumber: 27
   driverPrice: 4.3
   driverPortrait: {fileID: 21300000, guid: 7dca4bf351a174d46ae4eba3504ab127, type: 3}
-  driverNumber: 27
   driverNationality: {fileID: 21300000, guid: c3e25c507a7c17f488f1761757672e7e, type: 3}
   team: Haas

@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22f7902873ca2a046b9d89e6e8756195, type: 3}
+  m_Script: {fileID: 11500000, guid: 529abf08d14dba844bbb81a8e27731e4, type: 3}
   m_Name: EstebanOcconSO
   m_EditorClassIdentifier: 
   driverName: Esteban Occon
+  driverNumber: 31
   driverPrice: 9.4
   driverPortrait: {fileID: 21300000, guid: a35ce7d542329ce4295ba63b4e78d688, type: 3}
-  driverNumber: 31
   driverNationality: {fileID: 21300000, guid: c01cc47e5702e4d45b8084cebadfd013, type: 3}
   team: Alpine

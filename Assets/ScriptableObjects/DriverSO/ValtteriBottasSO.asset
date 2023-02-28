@@ -9,12 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22f7902873ca2a046b9d89e6e8756195, type: 3}
+  m_Script: {fileID: 11500000, guid: 529abf08d14dba844bbb81a8e27731e4, type: 3}
   m_Name: ValtteriBottasSO
   m_EditorClassIdentifier: 
   driverName: Valtteri Bottas
+  driverNumber: 77
   driverPrice: 7.8
   driverPortrait: {fileID: 21300000, guid: 26f8a140d4b277246b011bf3a8e532c3, type: 3}
-  driverNumber: 77
   driverNationality: {fileID: 21300000, guid: 6e24857e0fc8d88469d8f14d000cd6b2, type: 3}
   team: AlfaRomeo
