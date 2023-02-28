@@ -29,19 +29,19 @@ public class ConstructorDisplayPanel : MonoBehaviour
 
     private IEnumerator SelectConstructor() {
         for (int i = 0; i < amountOfSpin; i++) {
-            ConstructorSO currentDriverSO = constructorSoList[GetRandomConstructorSOIndex()];
-            yield return StartCoroutine(DriverSpinAnimtion(currentDriverSO));
+            ConstructorSO currentConstructorSO = constructorSoList[GetRandomConstructorSOIndex()];
+            yield return StartCoroutine(ConstructorSpinAnimtion(currentConstructorSO));
             yield return new WaitForSeconds(timeBeforeNextSpin);
         }
 
     }
 
     private int GetRandomConstructorSOIndex() {
-        int randomDriverSO = Random.Range(0, constructorSoList.Count);
-        return randomDriverSO;
+        int randomConstructorSo = Random.Range(0, constructorSoList.Count);
+        return randomConstructorSo;
     }
 
-    private IEnumerator DriverSpinAnimtion(ConstructorSO constructorSO) {
+    private IEnumerator ConstructorSpinAnimtion(ConstructorSO constructorSO) {
         ChangeDisplay(constructorSO);
         yield return new WaitForSeconds(timeBeforeNextSpin);
     }
