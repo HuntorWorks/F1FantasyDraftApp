@@ -219,8 +219,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   driverSoList:
+  - {fileID: 11400000, guid: 77979e44c9caba145a184e514a99e250, type: 2}
+  - {fileID: 11400000, guid: 7a8f78d9c0f85a848b0bd6f1e789a568, type: 2}
+  - {fileID: 11400000, guid: ca93b264485c10a47a700d9188eb0f24, type: 2}
+  - {fileID: 11400000, guid: 878d5b8cdcb89494d9ec73fc7c187951, type: 2}
+  - {fileID: 11400000, guid: 2440d89be17047e49be5c2ff21c0e280, type: 2}
+  - {fileID: 11400000, guid: f4768c2f630ff3943a45c0df7640b3da, type: 2}
+  - {fileID: 11400000, guid: ef90745f187a4c944afeacd1317c5ce6, type: 2}
+  - {fileID: 11400000, guid: 02e8db2a487fd84498d5e3110ba09f63, type: 2}
+  - {fileID: 11400000, guid: 1926f3f24be136a498bcca96435f685e, type: 2}
+  - {fileID: 11400000, guid: 6c1b654de4185f74082f8913e4f8caca, type: 2}
+  - {fileID: 11400000, guid: 7fe7f59d5cc78ce4aa6f9dad6b6770f9, type: 2}
   - {fileID: 11400000, guid: 5289903c2fa237542b36d049ce74378b, type: 2}
+  - {fileID: 11400000, guid: 8321a8ce0108475459046db51a0dab66, type: 2}
+  - {fileID: 11400000, guid: db48780875685c34bb0a64285e086418, type: 2}
+  - {fileID: 11400000, guid: 4ac88b07dd87c1344a7d21d5f2bf1426, type: 2}
+  - {fileID: 11400000, guid: d3f0e09e9aa1af54e8c8edf87b7a2c87, type: 2}
   - {fileID: 11400000, guid: 791fd1be7d08b8547b64920f03fc3ce0, type: 2}
+  - {fileID: 11400000, guid: 211e5cc3a1b77614c97a3d86d54d76a7, type: 2}
+  - {fileID: 11400000, guid: fb709b3e9d533fc438bf9c66671414ed, type: 2}
+  - {fileID: 11400000, guid: 23af61d5b16d0d340bf80296ea501b95, type: 2}
   driverName: {fileID: 1112245198}
   driverNumber: {fileID: 2041039717}
   driverPrice: {fileID: 167664404}
