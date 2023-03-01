@@ -18,3 +18,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: a35ce7d542329ce4295ba63b4e78d688, type: 3}
   driverNationality: {fileID: 21300000, guid: c01cc47e5702e4d45b8084cebadfd013, type: 3}
   team: Alpine
+  backgroundColor: {r: 0.1254902, g: 0.54509807, b: 0.77254903, a: 0}

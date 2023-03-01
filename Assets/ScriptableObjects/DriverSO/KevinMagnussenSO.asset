@@ -18,3 +18,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: 79ad44debefc3ef4db553c584681bff8, type: 3}
   driverNationality: {fileID: 21300000, guid: b0d274ee61ed7ef46b7c489ba1d9fc0a, type: 3}
   team: Haas
+  backgroundColor: {r: 0.6431373, g: 0.65882355, b: 0.67058825, a: 0}

@@ -18,3 +18,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: d8eb39b9e2d5e07448c93ae216a1a099, type: 3}
   driverNationality: {fileID: 21300000, guid: 0f88c56188ae2f94eb107751dbcf048f, type: 3}
   team: Williams
+  backgroundColor: {r: 0.21176471, g: 0.74509805, b: 0.8666667, a: 0}

@@ -11,4 +11,5 @@ public class DriverSO : ScriptableObject
     public Sprite driverPortrait;
     public Sprite driverNationality;
     public string team; 
+    public Color backgroundColor = new Color(); 
 }

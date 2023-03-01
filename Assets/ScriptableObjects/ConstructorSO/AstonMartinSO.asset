@@ -16,3 +16,4 @@ MonoBehaviour:
   constructorPrice: 6.7
   carSprite: {fileID: 21300000, guid: e1df8d2ca5f15a940bf5fca216a1dd22, type: 3}
   teamLogoSprite: {fileID: 21300000, guid: 769874bdc2bea424e91d40f37d8a2574, type: 3}
+  backgroundColor: {r: 0.17254902, g: 0.5058824, b: 0.42352942, a: 0}

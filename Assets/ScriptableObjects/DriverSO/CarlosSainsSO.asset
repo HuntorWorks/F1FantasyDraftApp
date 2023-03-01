@@ -18,3 +18,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: 08051ed0baad0574c88decd55b19104c, type: 3}
   driverNationality: {fileID: 21300000, guid: 971218cddd4d7ff4a9b60edf468d7440, type: 3}
   team: Ferarri
+  backgroundColor: {r: 0.90588236, g: 0.10980392, b: 0.13725491, a: 0}

@@ -18,3 +18,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: 25e459276550f0f49b826353f898a02b, type: 3}
   driverNationality: {fileID: 21300000, guid: 4f99b2b263379bf469626760b433327a, type: 3}
   team: Mclaren
+  backgroundColor: {r: 0.91764706, g: 0.47843137, b: 0.12156863, a: 0}

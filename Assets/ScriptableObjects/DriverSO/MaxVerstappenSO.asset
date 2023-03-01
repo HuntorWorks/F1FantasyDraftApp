@@ -18,3 +18,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: 77ba2af0420182c47aae1900a309764d, type: 3}
   driverNationality: {fileID: 21300000, guid: 270609de526484c48ac1d8a15bf9ba55, type: 3}
   team: RedBull
+  backgroundColor: {r: 0.12156863, g: 0.35686275, b: 0.77254903, a: 0}

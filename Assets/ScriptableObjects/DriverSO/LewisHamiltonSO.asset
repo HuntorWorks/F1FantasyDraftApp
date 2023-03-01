@@ -18,3 +18,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: e584a15b03f736f49af9bc8e9f6278d2, type: 3}
   driverNationality: {fileID: 21300000, guid: a4633f52e86e3b74497d8855ba08d13e, type: 3}
   team: Mercedes
+  backgroundColor: {r: 0, g: 0.8117647, b: 0.7294118, a: 0}

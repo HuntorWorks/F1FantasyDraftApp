@@ -18,3 +18,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: 11d180b7aff92a748a8bc943ba30b6ac, type: 3}
   driverNationality: {fileID: 21300000, guid: 6728af650f8510245b95976015bbd88e, type: 3}
   team: AlphaTauri
+  backgroundColor: {r: 0.29803923, g: 0.4745098, b: 0.59607846, a: 0}

@@ -18,3 +18,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: 2741ed4be199b874e87d3f592a40e4ee, type: 3}
   driverNationality: {fileID: 21300000, guid: df9bf8d249184a34ca66c17441b7452a, type: 3}
   team: AstonMartin
+  backgroundColor: {r: 0.17254902, g: 0.5058824, b: 0.42352942, a: 0}

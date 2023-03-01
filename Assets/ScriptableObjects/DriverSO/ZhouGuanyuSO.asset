@@ -18,3 +18,4 @@ MonoBehaviour:
   driverPortrait: {fileID: 21300000, guid: be1394536528aa841a47af89a1efd308, type: 3}
   driverNationality: {fileID: 21300000, guid: a1a9540846a756d49bccbf694e522e34, type: 3}
   team: AlfaRomeo
+  backgroundColor: {r: 0.69411767, g: 0.1254902, b: 0.21960784, a: 0}
