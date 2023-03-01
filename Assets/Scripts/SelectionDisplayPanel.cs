@@ -103,6 +103,8 @@ public class SelectionDisplayPanel : MonoBehaviour {
               uiManager.ShowDraftButton();
               break;
           case 2:
+              uiManager.UpdateDrafteePanelConstructor(currentSelectedConstructorSO);
+              uiManager.ShowDraftButton();
               break;
         }
         

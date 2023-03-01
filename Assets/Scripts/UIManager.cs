@@ -129,7 +129,28 @@ public class UIManager : MonoBehaviour {
     }
 
     public void UpdateDrafteePanelConstructor(ConstructorSO constructorSo) {
-        
+        switch (selectionManager.GetWhoIsCurrentlySelecting()) {
+            case 0:
+                draftee1.SetConstructorSelection(constructorSo);
+                selectionManager.GetDrafteeAtIndex(0).AddTeamValue(constructorSo.constructorPrice);
+                draftee1.SetTeamValue(selectionManager.GetDrafteeAtIndex(0).GetTeamValue().ToString());
+                break;
+            case 1:
+                draftee2.SetConstructorSelection(constructorSo);
+                selectionManager.GetDrafteeAtIndex(1).AddTeamValue(constructorSo.constructorPrice);
+                draftee2.SetTeamValue(selectionManager.GetDrafteeAtIndex(1).GetTeamValue().ToString());
+                break;
+            case 2:
+                draftee3.SetConstructorSelection(constructorSo);
+                selectionManager.GetDrafteeAtIndex(2).AddTeamValue(constructorSo.constructorPrice);
+                draftee3.SetTeamValue(selectionManager.GetDrafteeAtIndex(2).GetTeamValue().ToString());
+                break;
+            case 3:
+                draftee4.SetConstructorSelection(constructorSo);
+                selectionManager.GetDrafteeAtIndex(3).AddTeamValue(constructorSo.constructorPrice);
+                draftee4.SetTeamValue(selectionManager.GetDrafteeAtIndex(3).GetTeamValue().ToString());
+                break;
+        }
     }
 
     public void UpdateDrafteePanelDriverSO(DriverSO driverSo) {

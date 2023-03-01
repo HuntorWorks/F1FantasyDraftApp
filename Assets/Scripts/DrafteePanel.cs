@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -60,7 +61,7 @@ public class DrafteePanel : MonoBehaviour {
                 driverSelection1Name.gameObject.SetActive(true);
                 driverSelection1Name.text = selectedDriver.driverName;
                 driverSelection1Value.gameObject.SetActive(true);
-                driverSelection1Value.text = selectedDriver.driverPrice.ToString();
+                driverSelection1Value.text = selectedDriver.driverPrice + " Million";
                 driverSelection1Portrait.gameObject.SetActive(true);
                 driverSelection1Portrait.sprite = selectedDriver.driverPortrait;
                 driverSelectionNumber++; 
@@ -70,7 +71,7 @@ public class DrafteePanel : MonoBehaviour {
                 driverSelection2Name.gameObject.SetActive(true);
                 driverSelection2Name.text = selectedDriver.driverName;
                 driverSelection2Value.gameObject.SetActive(true);
-                driverSelection2Value.text = selectedDriver.driverPrice.ToString();
+                driverSelection2Value.text = selectedDriver.driverPrice + " Million";
                 driverSelection2Portrait.gameObject.SetActive(true);
                 driverSelection2Portrait.sprite = selectedDriver.driverPortrait;
                 driverSelectionNumber++; 
@@ -80,7 +81,7 @@ public class DrafteePanel : MonoBehaviour {
                 driverSelection3Name.gameObject.SetActive(true);
                 driverSelection3Name.text = selectedDriver.driverName;
                 driverSelection3Value.gameObject.SetActive(true);
-                driverSelection3Value.text = selectedDriver.driverPrice.ToString();
+                driverSelection3Value.text = selectedDriver.driverPrice+ " Million";
                 driverSelection3Portrait.gameObject.SetActive(true);
                 driverSelection3Portrait.sprite = selectedDriver.driverPortrait;
                 driverSelectionNumber++; 
@@ -90,7 +91,7 @@ public class DrafteePanel : MonoBehaviour {
                 driverSelection4Name.gameObject.SetActive(true);
                 driverSelection4Name.text = selectedDriver.driverName;
                 driverSelection4Value.gameObject.SetActive(true);
-                driverSelection4Value.text = selectedDriver.driverPrice.ToString();
+                driverSelection4Value.text = selectedDriver.driverPrice + " Million";
                 driverSelection4Portrait.gameObject.SetActive(true);
                 driverSelection4Portrait.sprite = selectedDriver.driverPortrait;
                 driverSelectionNumber++; 
@@ -100,7 +101,7 @@ public class DrafteePanel : MonoBehaviour {
                 driverSelection5Name.gameObject.SetActive(true);
                 driverSelection5Name.text = selectedDriver.driverName;
                 driverSelection5Value.gameObject.SetActive(true);
-                driverSelection5Value.text = selectedDriver.driverPrice.ToString();
+                driverSelection5Value.text = selectedDriver.driverPrice + " Million";
                 driverSelection5Portrait.gameObject.SetActive(true);
                 driverSelection5Portrait.sprite = selectedDriver.driverPortrait;
                 driverSelectionNumber++; 
@@ -111,9 +112,23 @@ public class DrafteePanel : MonoBehaviour {
     public void SetConstructorSelection(ConstructorSO selectedConstructor) {
         switch (constructorSelectionNumber) {
             case 0:
+                constructorSelection1Background.color = new Color(selectedConstructor.backgroundColor.r, selectedConstructor.backgroundColor.g, selectedConstructor.backgroundColor.b);
+                constructorSelection1Name.gameObject.SetActive(true);
+                constructorSelection1Name.text = selectedConstructor.constructorName;
+                constructorSelection1Logo.gameObject.SetActive(true);
+                constructorSelection1Logo.sprite = selectedConstructor.teamLogoSprite;
+                constructorSelection1Value.gameObject.SetActive(true);
+                constructorSelection1Value.text = selectedConstructor.constructorPrice + " Million";
                 constructorSelectionNumber++;
                 break;
             case 1:
+                constructorSelection2Background.color = new Color(selectedConstructor.backgroundColor.r, selectedConstructor.backgroundColor.g, selectedConstructor.backgroundColor.b);
+                constructorSelection2Name.gameObject.SetActive(true);
+                constructorSelection2Name.text = selectedConstructor.constructorName;
+                constructorSelection2Logo.gameObject.SetActive(true);
+                constructorSelection2Logo.sprite = selectedConstructor.teamLogoSprite;
+                constructorSelection2Value.gameObject.SetActive(true);
+                constructorSelection2Value.text = selectedConstructor.constructorPrice + " Million";
                 constructorSelectionNumber++; 
                 break; 
         }
