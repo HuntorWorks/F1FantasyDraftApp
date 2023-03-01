@@ -47,9 +47,11 @@ public class DrafteePanel : MonoBehaviour {
 
     private int driverSelectionNumber = 0;
     private int constructorSelectionNumber = 0;
+    
 
     private void OnEnable() {
-        this.teamValue.text = "0";
+        InitialSetUp();
+        this.teamValue.text = "0.0 M";
     }
     public void SetDriverSelection(DriverSO selectedDriver) {
         switch (driverSelectionNumber) {
@@ -81,7 +83,8 @@ public class DrafteePanel : MonoBehaviour {
                 break; 
         }
     }
-
+    
+    
     public void SetDrafteeName(string name) {
         this.drafteeName.text = name; 
     }
@@ -89,6 +92,32 @@ public class DrafteePanel : MonoBehaviour {
     public void ChangeTeamValue(int amount) {
         
     }
+
+    private void InitialSetUp() {
+        driverSelection1Name.gameObject.SetActive(false);
+        driverSelection1Value.gameObject.SetActive(false);
+        driverSelection1Portrait.gameObject.SetActive(false);
+        driverSelection2Name.gameObject.SetActive(false);
+        driverSelection2Value.gameObject.SetActive(false);
+        driverSelection2Portrait.gameObject.SetActive(false);
+        driverSelection3Name.gameObject.SetActive(false);
+        driverSelection3Value.gameObject.SetActive(false);
+        driverSelection3Portrait.gameObject.SetActive(false);
+        driverSelection4Name.gameObject.SetActive(false);
+        driverSelection4Value.gameObject.SetActive(false);
+        driverSelection4Portrait.gameObject.SetActive(false);
+        driverSelection5Name.gameObject.SetActive(false);
+        driverSelection5Value.gameObject.SetActive(false);
+        driverSelection5Portrait.gameObject.SetActive(false);
+        constructorSelection1Name.gameObject.SetActive(false);
+        constructorSelection1Value.gameObject.SetActive(false);
+        constructorSelection1Logo.gameObject.SetActive(false);
+        constructorSelection2Name.gameObject.SetActive(false);
+        constructorSelection2Value.gameObject.SetActive(false);
+        constructorSelection2Logo.gameObject.SetActive(false);
+        
+    }
+
 
 
 }

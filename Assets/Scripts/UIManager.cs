@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour {
     [SerializeField] private GameObject drafteeNumber2InputField;
     [SerializeField] private GameObject drafteeNumber3InputField;
     [SerializeField] private GameObject drafteeNumber4InputField;
+    [SerializeField] private GameObject draftButton;
     
     [SerializeField] private TextMeshProUGUI setUpText;
 
@@ -43,10 +44,11 @@ public class UIManager : MonoBehaviour {
         driverSelectionDisplayPanel.SetActive(false);
         constructorSelectionDisplayPanel.SetActive(false);
         selectionTypeCanvas.SetActive(false);
-        drafteeNumber1InputField.SetActive(false);
-        drafteeNumber2InputField.SetActive(false);
-        drafteeNumber3InputField.SetActive(false);
-        drafteeNumber4InputField.SetActive(false);
+        HideDraftButton();
+        HideDraftee1InputField();
+        HideDraftee2InputField();
+        HideDraftee3InputField();
+        HideDraftee4InputField();
         drafteePanel1.SetActive(false);
         draftee1 = drafteePanel1.GetComponent<DrafteePanel>();
         drafteePanel2.SetActive(false);
@@ -67,6 +69,8 @@ public class UIManager : MonoBehaviour {
             constructorSelectionDisplayPanel.SetActive(false);
         }
         driverSelectionDisplayPanel.SetActive(true);
+        ShowDraftButton();
+        
         if (OnSelectionSwitch != null) {
             OnSelectionSwitch(this, EventArgs.Empty);
         }
@@ -79,6 +83,7 @@ public class UIManager : MonoBehaviour {
         }
 
         constructorSelectionDisplayPanel.SetActive(true);
+        ShowDraftButton();
         if (OnSelectionSwitch != null) {
             OnSelectionSwitch(this, EventArgs.Empty);
         }
@@ -94,6 +99,18 @@ public class UIManager : MonoBehaviour {
         ShowDraftee1InputField();
     }
 
+    private void ShowDraftButton() {
+        draftButton.SetActive(true);
+        SetDraftButtonText(selectionManager.GetNameOfSelecting());
+    }
+
+    private void SetDraftButtonText(string textToDisplay) {
+        draftButton.GetComponentInChildren<TextMeshProUGUI>().text = textToDisplay;
+    }
+
+    private void HideDraftButton() {
+        draftButton.SetActive(false);
+    }
     private void HideSetUpText() {
         setUpText.gameObject.SetActive(false);
     }
@@ -106,7 +123,7 @@ public class UIManager : MonoBehaviour {
     }
 
     private void SetDrafteePanelBaseValues(DrafteePanel draftee, int drafteeIndex) {
-        draftee.SetDrafteeName(selectionManager.GetDratfeeAtIndex(drafteeIndex).GetDrafteeName());
+        draftee.SetDrafteeName(selectionManager.GetDrafteeAtIndex(drafteeIndex).GetDrafteeName());
         
     }
 

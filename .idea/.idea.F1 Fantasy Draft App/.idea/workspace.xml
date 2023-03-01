@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="Added prompts to enable draftees to insert the amount of draftees and the draftee names.  Also instead of prefabs, which were not showing on instantiate, I have them inactive in the heirarchy.">
+    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="Added the UI draftee panel element to pop up after inserting the draftee name, also created a selection manager to handle the generation of draftees and keep an eye on who's turn it is to draft. Added references to the draftees so I can use them as singletons to reference the values inside.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +14,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Prefabs/DrafteeSelectionPanel1.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Draftee.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DriverDisplayPanel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -24,7 +25,9 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomSelectionAtStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SelectionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -87,7 +90,7 @@
       <workItem from="1677528344274" duration="1152000" />
       <workItem from="1677665090955" duration="6064000" />
       <workItem from="1677672692065" duration="7097000" />
-      <workItem from="1677680593177" duration="7379000" />
+      <workItem from="1677680593177" duration="8336000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1677528468773</created>
@@ -124,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677684711503</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added the UI draftee panel element to pop up after inserting the draftee name, also created a selection manager to handle the generation of draftees and keep an eye on who's turn it is to draft. Added references to the draftees so I can use them as singletons to reference the values inside.">
+      <created>1677688241937</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677688241937</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +161,8 @@
     <MESSAGE value="Refactored code to put all the selection display code into one class.  Added UI elements to show hide driver - constructor selection. Added a random selection at start for the selection displays to get rid of the default editor values." />
     <MESSAGE value="Refactored code to put all the selection display code into one class. Incorporated UIManager and SelectionManager to handle this process.  Added UI elements to show hide driver - constructor selection. Added a random selection at start for the selection displays to get rid of the default editor values." />
     <MESSAGE value="Added prompts to enable draftees to insert the amount of draftees and the draftee names.  Also instead of prefabs, which were not showing on instantiate, I have them inactive in the heirarchy." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added prompts to enable draftees to insert the amount of draftees and the draftee names.  Also instead of prefabs, which were not showing on instantiate, I have them inactive in the heirarchy." />
+    <MESSAGE value="Added the UI draftee panel element to pop up after inserting the draftee name, also created a selection manager to handle the generation of draftees and keep an eye on who's turn it is to draft." />
+    <MESSAGE value="Added the UI draftee panel element to pop up after inserting the draftee name, also created a selection manager to handle the generation of draftees and keep an eye on who's turn it is to draft. Added references to the draftees so I can use them as singletons to reference the values inside." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the UI draftee panel element to pop up after inserting the draftee name, also created a selection manager to handle the generation of draftees and keep an eye on who's turn it is to draft. Added references to the draftees so I can use them as singletons to reference the values inside." />
   </component>
 </project>
