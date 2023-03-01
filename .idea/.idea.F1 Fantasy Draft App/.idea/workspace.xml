@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="Made the draftee panel into a prefab with the intention of instantiating the prefab on setup.  Added background colors to the SO's instead of using switch statement to change the background color, thus removing alot of reused code.">
+    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="Refactored code to put all the selection display code into one class. Incorporated UIManager and SelectionManager to handle this process.  Added UI elements to show hide driver - constructor selection. Added a random selection at start for the selection displays to get rid of the default editor values.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DrafteeSelectionPanel1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DrafteeSelectionPanel1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SelectionScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SelectionScreen.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DriverDisplayPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DriverDisplayPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +16,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Draftee.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DriverDisplayPanel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetDrafteeCountText.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetDrafteeNameValues.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomSelectionAtStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -77,7 +81,8 @@
       <workItem from="1677526014827" duration="2300000" />
       <workItem from="1677528344274" duration="1152000" />
       <workItem from="1677665090955" duration="6064000" />
-      <workItem from="1677672692065" duration="3401000" />
+      <workItem from="1677672692065" duration="7097000" />
+      <workItem from="1677680593177" duration="3769000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1677528468773</created>
@@ -100,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677670059096</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactored code to put all the selection display code into one class. Incorporated UIManager and SelectionManager to handle this process.  Added UI elements to show hide driver - constructor selection. Added a random selection at start for the selection displays to get rid of the default editor values.">
+      <created>1677676573249</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1677676573249</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +136,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Made the draftee panel into a prefab with the intention of instantiating the prefab on setup.  Added background colors to the SO's instead of using switch statement to change the background color, thus removing alot of reused code." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made the draftee panel into a prefab with the intention of instantiating the prefab on setup.  Added background colors to the SO's instead of using switch statement to change the background color, thus removing alot of reused code." />
+    <MESSAGE value="Refactored code to put all the selection display code into one class.  Added UI elements to show hide driver - constructor selection. Added a random selection at start for the selection displays to get rid of the default editor values." />
+    <MESSAGE value="Refactored code to put all the selection display code into one class. Incorporated UIManager and SelectionManager to handle this process.  Added UI elements to show hide driver - constructor selection. Added a random selection at start for the selection displays to get rid of the default editor values." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored code to put all the selection display code into one class. Incorporated UIManager and SelectionManager to handle this process.  Added UI elements to show hide driver - constructor selection. Added a random selection at start for the selection displays to get rid of the default editor values." />
   </component>
 </project>
