@@ -118,7 +118,7 @@ public class UIManager : MonoBehaviour {
     }
 
     public void SetAmountOfDraftees(int value) {
-        amountOfDraftees = value;
+        amountOfDraftees = value - 1;
         HideAmountOfDrafteeInputField();
         ShowDraftee1InputField();
     }

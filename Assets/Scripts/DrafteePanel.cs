@@ -139,7 +139,14 @@ public class DrafteePanel : MonoBehaviour {
         this.drafteeName.text = name; 
     }
 
+    public void SetTeamValueTextColor(Color color) {
+        this.teamValue.color = color; 
+    }
+
     public void SetTeamValue(string value) {
+        if (float.Parse(value) >= 100) {
+            this.teamValue.color = Color.red;
+        }
         this.teamValue.text = value + " M";
     }
 

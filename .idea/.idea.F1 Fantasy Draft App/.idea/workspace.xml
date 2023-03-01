@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="Added constructor to have the same functionality as the drivers. They now show up on drafteePanel and accumulate to the overall value of the team.">
+    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="Added F1 Logo to screen">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Draftee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Draftee.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectionDisplayPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectionDisplayPanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +16,9 @@
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Draftee.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/Draftee.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
@@ -28,6 +29,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetDrafteeNameValues.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomSelectionAtStart.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/SelectionDisplayPanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/SelectionDisplayPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SelectionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/SelectionManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/SelectionManager.cs" root0="SKIP_HIGHLIGHTING" />
@@ -36,6 +38,7 @@
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f45a99ffbb9f4d0580258c77e560b3ab16e000/09/55b1430c/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
@@ -100,7 +103,7 @@
       <workItem from="1677528344274" duration="1152000" />
       <workItem from="1677665090955" duration="6064000" />
       <workItem from="1677672692065" duration="7097000" />
-      <workItem from="1677680593177" duration="23615000" />
+      <workItem from="1677680593177" duration="25020000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1677528468773</created>
@@ -172,7 +175,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677706055167</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added selected constructor and driver to draftee personal lists - Added a cautious 'yield return new WaitForSeconds(1f)' before removing the selected from the correct list, to ensure any process if any is finished as was running into an 'ObjectDisposedException' but apparently is only UnityEditor which wont be around in the build.">
+      <created>1677712122007</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1677712122007</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added F1 Logo to screen">
+      <created>1677712721140</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1677712721140</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +222,9 @@
     <MESSAGE value="previous commit" />
     <MESSAGE value="SetActive(false) on draft button once pressed, and re enabled draft button once the selection is completed. Set DrafteePanel to show the selected drivers with accumulating totals as the draft progresses. Added random spin amount to the selection process, to give it more variety. Changed the GetWhoIsSelectingNext to after the process has completed as was giving error, where it would total the wrong drafteepanel. Added isFirstPick bool to UIManager.cs to reuse the same method without it giving errors." />
     <MESSAGE value="Added constructor to have the same functionality as the drivers. They now show up on drafteePanel and accumulate to the overall value of the team." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added constructor to have the same functionality as the drivers. They now show up on drafteePanel and accumulate to the overall value of the team." />
+    <MESSAGE value="Added selected constructor and driver to draftee personal lists - Added a cautious 'yield return new WaitForSeconds(1f)' before removing the selected from the correct list, to ensure any process if any is finished as was running into an 'ObjectDisposedException' but apparently is only UnityEditor which wont be around in the build." />
+    <MESSAGE value="Added F1 Logo to screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added F1 Logo to screen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

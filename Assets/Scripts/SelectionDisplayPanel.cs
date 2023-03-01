@@ -55,12 +55,10 @@ public class SelectionDisplayPanel : MonoBehaviour {
 
     private void OnConstructorSelectionChange() {
         ChangeDisplay(RandomConstructorSelectionAtFirstLoad(constructorSoList));
-        Debug.Log("ConstructorSelected!");
     }
 
     private void OnDriverSelectionChange() {
         ChangeDisplay(RandomDriverSelectionAtFirstLoad(driverSoList));
-        Debug.Log("DriverSelected!");
     }
     public void HandleDraftProcess()
     {

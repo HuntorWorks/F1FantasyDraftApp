@@ -78,10 +78,6 @@ public class SelectionManager : MonoBehaviour {
         
     }
     
-    public List<Draftee> GetDrafteeList() {
-        return draftees;
-    }
-
     public Draftee GetDrafteeAtIndex(int index) {
         return draftees[index];
     }
