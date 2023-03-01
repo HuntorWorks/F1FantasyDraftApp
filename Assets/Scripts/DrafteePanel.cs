@@ -56,19 +56,54 @@ public class DrafteePanel : MonoBehaviour {
     public void SetDriverSelection(DriverSO selectedDriver) {
         switch (driverSelectionNumber) {
             case 0:
+                driverSelection1Background.color = new Color(selectedDriver.backgroundColor.r, selectedDriver.backgroundColor.g, selectedDriver.backgroundColor.b);
+                driverSelection1Name.gameObject.SetActive(true);
+                driverSelection1Name.text = selectedDriver.driverName;
+                driverSelection1Value.gameObject.SetActive(true);
+                driverSelection1Value.text = selectedDriver.driverPrice.ToString();
+                driverSelection1Portrait.gameObject.SetActive(true);
+                driverSelection1Portrait.sprite = selectedDriver.driverPortrait;
                 driverSelectionNumber++; 
                 break;
             case 1:
-                driverSelectionNumber++;
+                driverSelection2Background.color = new Color(selectedDriver.backgroundColor.r, selectedDriver.backgroundColor.g, selectedDriver.backgroundColor.b);
+                driverSelection2Name.gameObject.SetActive(true);
+                driverSelection2Name.text = selectedDriver.driverName;
+                driverSelection2Value.gameObject.SetActive(true);
+                driverSelection2Value.text = selectedDriver.driverPrice.ToString();
+                driverSelection2Portrait.gameObject.SetActive(true);
+                driverSelection2Portrait.sprite = selectedDriver.driverPortrait;
+                driverSelectionNumber++; 
                 break;
             case 2:
-                driverSelectionNumber++;
+                driverSelection3Background.color = new Color(selectedDriver.backgroundColor.r, selectedDriver.backgroundColor.g, selectedDriver.backgroundColor.b);
+                driverSelection3Name.gameObject.SetActive(true);
+                driverSelection3Name.text = selectedDriver.driverName;
+                driverSelection3Value.gameObject.SetActive(true);
+                driverSelection3Value.text = selectedDriver.driverPrice.ToString();
+                driverSelection3Portrait.gameObject.SetActive(true);
+                driverSelection3Portrait.sprite = selectedDriver.driverPortrait;
+                driverSelectionNumber++; 
                 break;
             case 3:
-                driverSelectionNumber++;
+                driverSelection4Background.color = new Color(selectedDriver.backgroundColor.r, selectedDriver.backgroundColor.g, selectedDriver.backgroundColor.b);
+                driverSelection4Name.gameObject.SetActive(true);
+                driverSelection4Name.text = selectedDriver.driverName;
+                driverSelection4Value.gameObject.SetActive(true);
+                driverSelection4Value.text = selectedDriver.driverPrice.ToString();
+                driverSelection4Portrait.gameObject.SetActive(true);
+                driverSelection4Portrait.sprite = selectedDriver.driverPortrait;
+                driverSelectionNumber++; 
                 break;
-            case 4:
-                driverSelectionNumber++;
+            case 4:                
+                driverSelection5Background.color = new Color(selectedDriver.backgroundColor.r, selectedDriver.backgroundColor.g, selectedDriver.backgroundColor.b);
+                driverSelection5Name.gameObject.SetActive(true);
+                driverSelection5Name.text = selectedDriver.driverName;
+                driverSelection5Value.gameObject.SetActive(true);
+                driverSelection5Value.text = selectedDriver.driverPrice.ToString();
+                driverSelection5Portrait.gameObject.SetActive(true);
+                driverSelection5Portrait.sprite = selectedDriver.driverPortrait;
+                driverSelectionNumber++; 
                 break; 
         }
     }
@@ -89,8 +124,8 @@ public class DrafteePanel : MonoBehaviour {
         this.drafteeName.text = name; 
     }
 
-    public void ChangeTeamValue(int amount) {
-        
+    public void SetTeamValue(string value) {
+        this.teamValue.text = value + " M";
     }
 
     private void InitialSetUp() {

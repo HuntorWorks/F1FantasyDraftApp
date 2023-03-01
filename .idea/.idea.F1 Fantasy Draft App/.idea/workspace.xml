@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="Added the UI draftee panel element to pop up after inserting the draftee name, also created a selection manager to handle the generation of draftees and keep an eye on who's turn it is to draft. Added references to the draftees so I can use them as singletons to reference the values inside.">
+    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="previous commit">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SelectionScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SelectionScreen.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectionDisplayPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectionDisplayPanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +19,10 @@
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Prefabs/DrafteeSelectionPanel1.prefab" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Draftee.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" root0="FORCE_HIGHLIGHTING" />
@@ -23,7 +30,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetDrafteeCountText.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GetDrafteeNameValues.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RandomSelectionAtStart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/SelectionDisplayPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SelectionManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/SelectionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/SelectionManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/UIManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -90,7 +102,7 @@
       <workItem from="1677528344274" duration="1152000" />
       <workItem from="1677665090955" duration="6064000" />
       <workItem from="1677672692065" duration="7097000" />
-      <workItem from="1677680593177" duration="8336000" />
+      <workItem from="1677680593177" duration="17133000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1677528468773</created>
@@ -134,7 +146,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677688241937</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Added draft button that will act as the user input for each selection, also working on getting the functionality of allowing the text to change base on value of the next selector. -- THIS IS STILL WIP -- Hid some things on the drafteePanel.cs so it defaults to empty when first enabled.">
+      <created>1677690210080</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1677690210080</updated>
+    </task>
+    <task id="LOCAL-00008" summary="previous commit">
+      <created>1677690220818</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1677690220818</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +189,40 @@
     <MESSAGE value="Added prompts to enable draftees to insert the amount of draftees and the draftee names.  Also instead of prefabs, which were not showing on instantiate, I have them inactive in the heirarchy." />
     <MESSAGE value="Added the UI draftee panel element to pop up after inserting the draftee name, also created a selection manager to handle the generation of draftees and keep an eye on who's turn it is to draft." />
     <MESSAGE value="Added the UI draftee panel element to pop up after inserting the draftee name, also created a selection manager to handle the generation of draftees and keep an eye on who's turn it is to draft. Added references to the draftees so I can use them as singletons to reference the values inside." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the UI draftee panel element to pop up after inserting the draftee name, also created a selection manager to handle the generation of draftees and keep an eye on who's turn it is to draft. Added references to the draftees so I can use them as singletons to reference the values inside." />
+    <MESSAGE value="Added draft button that will act as the user input for each selection, also working on getting the functionality of allowing the text to change base on value of the next selector. -- THIS IS STILL WIP -- Hid some things on the drafteePanel.cs so it defaults to empty when first enabled." />
+    <MESSAGE value="previous commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="previous commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs</url>
+          <line>230</line>
+          <properties documentPath="C:\Development\Projects\F1 Fantasy Draft App\F1 Fantasy Draft App\Assets\Scripts\UIManager.cs" initialLine="184" containingFunctionPresentation="method 'ShowDraftee3InputField'">
+            <startOffsets>
+              <option value="8263" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8264" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs</url>
+          <line>234</line>
+          <properties documentPath="C:\Development\Projects\F1 Fantasy Draft App\F1 Fantasy Draft App\Assets\Scripts\UIManager.cs" initialLine="188" containingFunctionPresentation="method 'HideDraftee3InputField'">
+            <startOffsets>
+              <option value="8419" />
+            </startOffsets>
+            <endOffsets>
+              <option value="8420" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

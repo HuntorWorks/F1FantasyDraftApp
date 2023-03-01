@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,7 +32,10 @@ public class UIManager : MonoBehaviour {
     private DrafteePanel draftee3;
     private DrafteePanel draftee4;
 
-    [SerializeField] private SelectionManager selectionManager; 
+    private bool isFirstPick = true;
+
+    [SerializeField] private SelectionManager selectionManager;
+    [SerializeField] private SelectionDisplayPanel selectionDisplayPanel;
     
     
     public event EventHandler OnSelectionSwitch; //Event that fires when there is a selection switch and subscribed to in 'RandomSelectionAtStart'
@@ -41,6 +45,8 @@ public class UIManager : MonoBehaviour {
 
     private void Awake() {
         selectionManager.GetComponent<SelectionManager>();
+        selectionDisplayPanel = selectionManager.GetComponent<SelectionDisplayPanel>();
+        
         driverSelectionDisplayPanel.SetActive(false);
         constructorSelectionDisplayPanel.SetActive(false);
         selectionTypeCanvas.SetActive(false);
@@ -74,9 +80,27 @@ public class UIManager : MonoBehaviour {
         if (OnSelectionSwitch != null) {
             OnSelectionSwitch(this, EventArgs.Empty);
         }
-
     }
 
+    // Called from draft button. 
+    public void StartDraftProcess() {
+        selectionDisplayPanel.HandleDraftProcess();
+        HideDraftButton();
+    }
+
+    public void ShowDraftButton() {
+        draftButton.SetActive(true);
+        if (isFirstPick) {
+            SetDraftButtonText(selectionManager.GetNameOfSelecting());
+            isFirstPick = false;
+        } else {
+            selectionManager.GetNextWhoIsSelecting();
+            SetDraftButtonText(selectionManager.GetNameOfSelecting());
+        }
+
+
+    }
+    
     public void ShowConstructorSelection() {
         if (driverSelectionDisplayPanel.activeInHierarchy) {
             driverSelectionDisplayPanel.SetActive(false);
@@ -99,13 +123,38 @@ public class UIManager : MonoBehaviour {
         ShowDraftee1InputField();
     }
 
-    private void ShowDraftButton() {
-        draftButton.SetActive(true);
-        SetDraftButtonText(selectionManager.GetNameOfSelecting());
+
+    public void SetDraftButtonText(string textToDisplay) {
+        draftButton.GetComponentInChildren<TextMeshProUGUI>().text = textToDisplay + "'s turn!";
     }
 
-    private void SetDraftButtonText(string textToDisplay) {
-        draftButton.GetComponentInChildren<TextMeshProUGUI>().text = textToDisplay;
+    public void UpdateDrafteePanelConstructor(ConstructorSO constructorSo) {
+        
+    }
+
+    public void UpdateDrafteePanelDriverSO(DriverSO driverSo) {
+        switch (selectionManager.GetWhoIsCurrentlySelecting()) {
+            case 0:
+                draftee1.SetDriverSelection(driverSo);
+                selectionManager.GetDrafteeAtIndex(0).AddTeamValue(driverSo.driverPrice);
+                draftee1.SetTeamValue(selectionManager.GetDrafteeAtIndex(0).GetTeamValue().ToString());
+                break;
+            case 1:
+                draftee2.SetDriverSelection(driverSo);
+                selectionManager.GetDrafteeAtIndex(1).AddTeamValue(driverSo.driverPrice);
+                draftee2.SetTeamValue(selectionManager.GetDrafteeAtIndex(1).GetTeamValue().ToString());
+                break;
+            case 2:
+                draftee3.SetDriverSelection(driverSo);
+                selectionManager.GetDrafteeAtIndex(2).AddTeamValue(driverSo.driverPrice);
+                draftee3.SetTeamValue(selectionManager.GetDrafteeAtIndex(2).GetTeamValue().ToString());
+                break;
+            case 3:
+                draftee4.SetDriverSelection(driverSo);
+                selectionManager.GetDrafteeAtIndex(3).AddTeamValue(driverSo.driverPrice);
+                draftee4.SetTeamValue(selectionManager.GetDrafteeAtIndex(3).GetTeamValue().ToString());
+                break;
+        }
     }
 
     private void HideDraftButton() {
@@ -124,7 +173,6 @@ public class UIManager : MonoBehaviour {
 
     private void SetDrafteePanelBaseValues(DrafteePanel draftee, int drafteeIndex) {
         draftee.SetDrafteeName(selectionManager.GetDrafteeAtIndex(drafteeIndex).GetDrafteeName());
-        
     }
 
     public void AddDrafteeNameToList(string value) {
@@ -170,11 +218,9 @@ public class UIManager : MonoBehaviour {
         ChangeSetUpTextValue("Enter Draftee 1's Name");
         drafteeNumber1InputField.SetActive(true);
     }
-
     private void HideDraftee1InputField() {
         drafteeNumber1InputField.SetActive(false);
     }
-
     private void ShowDraftee2InputField() {
         ChangeSetUpTextValue("Enter Draftee 2's Name");
         drafteeNumber2InputField.SetActive(true);
@@ -182,7 +228,6 @@ public class UIManager : MonoBehaviour {
     private void HideDraftee2InputField() {
         drafteeNumber2InputField.SetActive(false);
     }
-
     private void ShowDraftee3InputField() {
         ChangeSetUpTextValue("Enter Draftee 3's Name");
         drafteeNumber3InputField.SetActive(true);
@@ -194,12 +239,8 @@ public class UIManager : MonoBehaviour {
         ChangeSetUpTextValue("Enter Draftee 4's Name");
         drafteeNumber4InputField.SetActive(true);
     }
-    
     private void HideDraftee4InputField() {
         drafteeNumber4InputField.SetActive(false);
     }
-
-
-
-
+    
 }

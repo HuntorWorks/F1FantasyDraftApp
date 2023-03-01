@@ -18,7 +18,9 @@ public class SelectionManager : MonoBehaviour {
     private void GetFirstToDraftRandom() {
         whoIsSelecting = Random.Range(0, draftees.Count);
     }
-    public void GetWhoIsSelecting() {
+    
+    //Called from draft button. 
+    public void GetNextWhoIsSelecting() {
         if (whoIsSelecting == 0) {
             whoIsSelecting = 1; 
         } else if (whoIsSelecting == 1) {
@@ -30,19 +32,27 @@ public class SelectionManager : MonoBehaviour {
         }
     }
 
+    public int GetWhoIsCurrentlySelecting() {
+        return whoIsSelecting;
+    }
+
     public string GetNameOfSelecting() {
         switch (whoIsSelecting) {
             case 0:
                 drafteeName =  GetDrafteeAtIndex(0).GetDrafteeName();
+                uiManager.SetDraftButtonText(drafteeName);
                 break;
             case 1:
                 drafteeName = GetDrafteeAtIndex(1).GetDrafteeName();
+                uiManager.SetDraftButtonText(drafteeName);
                 break;
             case 2:
                 drafteeName = GetDrafteeAtIndex(2).GetDrafteeName();
+                uiManager.SetDraftButtonText(drafteeName);
                 break;
             case 3:
                 drafteeName = GetDrafteeAtIndex(3).GetDrafteeName();
+                uiManager.SetDraftButtonText(drafteeName);
                 break;
         }
 

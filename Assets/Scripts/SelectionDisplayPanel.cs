@@ -1,11 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.UI;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class SelectionDisplayPanel : MonoBehaviour {
+
+    [SerializeField] private UIManager uiManager;
+    [SerializeField] private SelectionManager selectionManager;
     [Header("Driver Selection")]
     [SerializeField] private Transform driverSelection;
     [SerializeField] private List<DriverSO> driverSoList;
@@ -25,13 +32,17 @@ public class SelectionDisplayPanel : MonoBehaviour {
     [SerializeField] private Image constructorCarSprite;
     [SerializeField] private Image constructorBackgroundColor;
 
-    [SerializeField] private int amountOfSpin = 20;
-    [SerializeField] private float timeBeforeNextSpin = .75f;
+    [SerializeField] private int maxSpinAmount = 20;
+    [SerializeField] private float timeBeforeNextSpin = .03f;
+    
 
     private DriverSO currentSelectedDriverSO;
     private ConstructorSO currentSelectedConstructorSO;
     private int typeOfSelection = 1; //1 Driver, 2 constructor
 
+    private void Awake() {
+        selectionManager = GetComponent<SelectionManager>();
+    }
 
     private void Start() {
         RandomSelectionAtStart randomDriverSelectionAtStart = driverSelection.GetComponent<RandomSelectionAtStart>();
@@ -51,18 +62,9 @@ public class SelectionDisplayPanel : MonoBehaviour {
         ChangeDisplay(RandomDriverSelectionAtFirstLoad(driverSoList));
         Debug.Log("DriverSelected!");
     }
-
-    private void Update()
+    public void HandleDraftProcess()
     {
-        HandleInput();
-
-    }
-    private void HandleInput()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(Select(typeOfSelection));
-        }
+        StartCoroutine(Select(typeOfSelection));
     }
 
     private DriverSO RandomDriverSelectionAtFirstLoad(List<DriverSO> driverList) {
@@ -78,16 +80,16 @@ public class SelectionDisplayPanel : MonoBehaviour {
         return randomSelectedConstructor;
     }
 
-    private IEnumerator Select(int selectionType)
-    {
+    private IEnumerator Select(int selectionType) {
+        int amountOfSpin = Random.Range(0, maxSpinAmount);
         for (int i = 0; i < amountOfSpin; i++) {
             if (selectionType == 1) {
                 currentSelectedDriverSO = driverSoList[GetRandomIndex(driverSoList)];
-                yield return StartCoroutine(SpinAnimtion(currentSelectedDriverSO));
+                yield return StartCoroutine(SpinAnimation(currentSelectedDriverSO));
                 yield return new WaitForSeconds(timeBeforeNextSpin);
             } else if (selectionType == 2) {
                 currentSelectedConstructorSO = constructorSoList[GetRandomIndex(constructorSoList)];
-                yield return StartCoroutine(SpinAnimtion(currentSelectedConstructorSO));
+                yield return StartCoroutine(SpinAnimation(currentSelectedConstructorSO));
                 yield return new WaitForSeconds(timeBeforeNextSpin);
             }
         }
@@ -95,6 +97,10 @@ public class SelectionDisplayPanel : MonoBehaviour {
         switch (selectionType)
         {
           case 1:
+              //Need to give selected SO, to be shown on the correct panel for the current person who is drafting. Need to send to UI manager
+              uiManager.UpdateDrafteePanelDriverSO(currentSelectedDriverSO);
+              Debug.Log(selectionManager.GetWhoIsCurrentlySelecting());
+              uiManager.ShowDraftButton();
               break;
           case 2:
               break;
@@ -113,13 +119,13 @@ public class SelectionDisplayPanel : MonoBehaviour {
         return randomConstructorSO;
     }
 
-    private IEnumerator SpinAnimtion(DriverSO driverSo)
+    private IEnumerator SpinAnimation(DriverSO driverSo)
     {
         ChangeDisplay(driverSo);
         yield return new WaitForSeconds(timeBeforeNextSpin);
     }
 
-    private IEnumerator SpinAnimtion(ConstructorSO constructorSo) {
+    private IEnumerator SpinAnimation(ConstructorSO constructorSo) {
         ChangeDisplay(constructorSo);
         yield return new WaitForSeconds(timeBeforeNextSpin);
     }
