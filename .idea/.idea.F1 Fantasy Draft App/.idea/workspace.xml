@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="SetActive(false) on draft button once pressed, and re enabled draft button once the selection is completed. Set DrafteePanel to show the selected drivers with accumulating totals as the draft progresses. Added random spin amount to the selection process, to give it more variety. Changed the GetWhoIsSelectingNext to after the process has completed as was giving error, where it would total the wrong drafteepanel. Added isFirstPick bool to UIManager.cs to reuse the same method without it giving errors.">
+    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="Added constructor to have the same functionality as the drivers. They now show up on drafteePanel and accumulate to the overall value of the team.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Draftee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Draftee.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectionDisplayPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectionDisplayPanel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" afterDir="false" />
     </list>
@@ -38,6 +38,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/TextMesh Pro/Examples &amp; Extras/Resources/Fonts &amp; Materials/Bangers SDF.asset" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.textmeshpro@3.0.6/Scripts/Runtime/TMP_InputField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f45a99ffbb9f4d0580258c77e560b3ab16e000/09/55b1430c/UnityEvent.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -99,7 +100,7 @@
       <workItem from="1677528344274" duration="1152000" />
       <workItem from="1677665090955" duration="6064000" />
       <workItem from="1677672692065" duration="7097000" />
-      <workItem from="1677680593177" duration="18012000" />
+      <workItem from="1677680593177" duration="23615000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1677528468773</created>
@@ -164,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677705123967</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added constructor to have the same functionality as the drivers. They now show up on drafteePanel and accumulate to the overall value of the team.">
+      <created>1677706055167</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1677706055167</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,33 +204,34 @@
     <MESSAGE value="Added draft button that will act as the user input for each selection, also working on getting the functionality of allowing the text to change base on value of the next selector. -- THIS IS STILL WIP -- Hid some things on the drafteePanel.cs so it defaults to empty when first enabled." />
     <MESSAGE value="previous commit" />
     <MESSAGE value="SetActive(false) on draft button once pressed, and re enabled draft button once the selection is completed. Set DrafteePanel to show the selected drivers with accumulating totals as the draft progresses. Added random spin amount to the selection process, to give it more variety. Changed the GetWhoIsSelectingNext to after the process has completed as was giving error, where it would total the wrong drafteepanel. Added isFirstPick bool to UIManager.cs to reuse the same method without it giving errors." />
-    <option name="LAST_COMMIT_MESSAGE" value="SetActive(false) on draft button once pressed, and re enabled draft button once the selection is completed. Set DrafteePanel to show the selected drivers with accumulating totals as the draft progresses. Added random spin amount to the selection process, to give it more variety. Changed the GetWhoIsSelectingNext to after the process has completed as was giving error, where it would total the wrong drafteepanel. Added isFirstPick bool to UIManager.cs to reuse the same method without it giving errors." />
+    <MESSAGE value="Added constructor to have the same functionality as the drivers. They now show up on drafteePanel and accumulate to the overall value of the team." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added constructor to have the same functionality as the drivers. They now show up on drafteePanel and accumulate to the overall value of the team." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs</url>
-          <line>251</line>
+          <line>259</line>
           <properties documentPath="C:\Development\Projects\F1 Fantasy Draft App\F1 Fantasy Draft App\Assets\Scripts\UIManager.cs" initialLine="184" containingFunctionPresentation="method 'ShowDraftee3InputField'">
             <startOffsets>
-              <option value="9577" />
+              <option value="10321" />
             </startOffsets>
             <endOffsets>
-              <option value="9578" />
+              <option value="10322" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/UIManager.cs</url>
-          <line>255</line>
+          <line>263</line>
           <properties documentPath="C:\Development\Projects\F1 Fantasy Draft App\F1 Fantasy Draft App\Assets\Scripts\UIManager.cs" initialLine="188" containingFunctionPresentation="method 'HideDraftee3InputField'">
             <startOffsets>
-              <option value="9733" />
+              <option value="10477" />
             </startOffsets>
             <endOffsets>
-              <option value="9734" />
+              <option value="10478" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />

@@ -82,13 +82,15 @@ public class SelectionDisplayPanel : MonoBehaviour {
 
     private IEnumerator Select(int selectionType) {
         int amountOfSpin = Random.Range(0, maxSpinAmount);
+        List<ConstructorSO> constructorSoCopy = new List<ConstructorSO>(constructorSoList);
+        List<DriverSO> driverSoCopy = new List<DriverSO>(driverSoList);
         for (int i = 0; i < amountOfSpin; i++) {
             if (selectionType == 1) {
-                currentSelectedDriverSO = driverSoList[GetRandomIndex(driverSoList)];
+                currentSelectedDriverSO = driverSoCopy[GetRandomIndex(driverSoCopy)];
                 yield return StartCoroutine(SpinAnimation(currentSelectedDriverSO));
                 yield return new WaitForSeconds(timeBeforeNextSpin);
             } else if (selectionType == 2) {
-                currentSelectedConstructorSO = constructorSoList[GetRandomIndex(constructorSoList)];
+                currentSelectedConstructorSO = constructorSoCopy[GetRandomIndex(constructorSoCopy)];
                 yield return StartCoroutine(SpinAnimation(currentSelectedConstructorSO));
                 yield return new WaitForSeconds(timeBeforeNextSpin);
             }
@@ -97,13 +99,15 @@ public class SelectionDisplayPanel : MonoBehaviour {
         switch (selectionType)
         {
           case 1:
-              //Need to give selected SO, to be shown on the correct panel for the current person who is drafting. Need to send to UI manager
               uiManager.UpdateDrafteePanelDriverSO(currentSelectedDriverSO);
-              Debug.Log(selectionManager.GetWhoIsCurrentlySelecting());
+              yield return new WaitForSeconds(1f); // cautious check, to allow other processes to finish, if any
+              driverSoList.Remove(currentSelectedDriverSO);
               uiManager.ShowDraftButton();
               break;
           case 2:
               uiManager.UpdateDrafteePanelConstructor(currentSelectedConstructorSO);
+              yield return new WaitForSeconds(1f); // cautious check, to allow other processes to finish, if any. 
+              constructorSoList.Remove(currentSelectedConstructorSO);
               uiManager.ShowDraftButton();
               break;
         }

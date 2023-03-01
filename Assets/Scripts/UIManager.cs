@@ -132,21 +132,25 @@ public class UIManager : MonoBehaviour {
         switch (selectionManager.GetWhoIsCurrentlySelecting()) {
             case 0:
                 draftee1.SetConstructorSelection(constructorSo);
+                selectionManager.GetDrafteeAtIndex(0).AddConstructorToDrafteeList(constructorSo);
                 selectionManager.GetDrafteeAtIndex(0).AddTeamValue(constructorSo.constructorPrice);
                 draftee1.SetTeamValue(selectionManager.GetDrafteeAtIndex(0).GetTeamValue().ToString());
                 break;
             case 1:
                 draftee2.SetConstructorSelection(constructorSo);
+                selectionManager.GetDrafteeAtIndex(1).AddConstructorToDrafteeList(constructorSo);
                 selectionManager.GetDrafteeAtIndex(1).AddTeamValue(constructorSo.constructorPrice);
                 draftee2.SetTeamValue(selectionManager.GetDrafteeAtIndex(1).GetTeamValue().ToString());
                 break;
             case 2:
                 draftee3.SetConstructorSelection(constructorSo);
+                selectionManager.GetDrafteeAtIndex(2).AddConstructorToDrafteeList(constructorSo);
                 selectionManager.GetDrafteeAtIndex(2).AddTeamValue(constructorSo.constructorPrice);
                 draftee3.SetTeamValue(selectionManager.GetDrafteeAtIndex(2).GetTeamValue().ToString());
                 break;
             case 3:
                 draftee4.SetConstructorSelection(constructorSo);
+                selectionManager.GetDrafteeAtIndex(3).AddConstructorToDrafteeList(constructorSo);
                 selectionManager.GetDrafteeAtIndex(3).AddTeamValue(constructorSo.constructorPrice);
                 draftee4.SetTeamValue(selectionManager.GetDrafteeAtIndex(3).GetTeamValue().ToString());
                 break;
@@ -158,20 +162,24 @@ public class UIManager : MonoBehaviour {
             case 0:
                 draftee1.SetDriverSelection(driverSo);
                 selectionManager.GetDrafteeAtIndex(0).AddTeamValue(driverSo.driverPrice);
+                selectionManager.GetDrafteeAtIndex(0).AddDriverToDrafteeList(driverSo);
                 draftee1.SetTeamValue(selectionManager.GetDrafteeAtIndex(0).GetTeamValue().ToString());
                 break;
             case 1:
                 draftee2.SetDriverSelection(driverSo);
                 selectionManager.GetDrafteeAtIndex(1).AddTeamValue(driverSo.driverPrice);
+                selectionManager.GetDrafteeAtIndex(1).AddDriverToDrafteeList(driverSo);
                 draftee2.SetTeamValue(selectionManager.GetDrafteeAtIndex(1).GetTeamValue().ToString());
                 break;
             case 2:
                 draftee3.SetDriverSelection(driverSo);
+                selectionManager.GetDrafteeAtIndex(2).AddDriverToDrafteeList(driverSo);
                 selectionManager.GetDrafteeAtIndex(2).AddTeamValue(driverSo.driverPrice);
                 draftee3.SetTeamValue(selectionManager.GetDrafteeAtIndex(2).GetTeamValue().ToString());
                 break;
             case 3:
                 draftee4.SetDriverSelection(driverSo);
+                selectionManager.GetDrafteeAtIndex(3).AddDriverToDrafteeList(driverSo);
                 selectionManager.GetDrafteeAtIndex(3).AddTeamValue(driverSo.driverPrice);
                 draftee4.SetTeamValue(selectionManager.GetDrafteeAtIndex(3).GetTeamValue().ToString());
                 break;
