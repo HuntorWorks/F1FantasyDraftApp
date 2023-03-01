@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DrafteePanel : MonoBehaviour {
-
+    
     [SerializeField] private TextMeshProUGUI drafteeName;
     [SerializeField] private TextMeshProUGUI teamValue;
     // Driver 1 Selection
@@ -46,8 +46,11 @@ public class DrafteePanel : MonoBehaviour {
     [SerializeField] private Image constructorSelection2Logo;
 
     private int driverSelectionNumber = 0;
-    private int constructorSelectionNumber = 0; 
-    
+    private int constructorSelectionNumber = 0;
+
+    private void OnEnable() {
+        this.teamValue.text = "0";
+    }
     public void SetDriverSelection(DriverSO selectedDriver) {
         switch (driverSelectionNumber) {
             case 0:
@@ -78,6 +81,14 @@ public class DrafteePanel : MonoBehaviour {
                 break; 
         }
     }
-    
+
+    public void SetDrafteeName(string name) {
+        this.drafteeName.text = name; 
+    }
+
+    public void ChangeTeamValue(int amount) {
+        
+    }
+
 
 }

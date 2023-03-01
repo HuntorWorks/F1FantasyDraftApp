@@ -622,6 +622,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157531802}
     m_Modifications:
+    - target: {fileID: 3560113589947138538, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
+      propertyPath: m_text
+      value: 83.1 M
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560113589947138539, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 111
+      objectReference: {fileID: 0}
     - target: {fileID: 3560113590624506080, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2105,6 +2113,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157531802}
     m_Modifications:
+    - target: {fileID: 3560113589947138538, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
+      propertyPath: m_text
+      value: 83.1 M
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560113589947138539, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 110
+      objectReference: {fileID: 0}
     - target: {fileID: 3560113590624506080, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3007,6 +3023,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157531802}
     m_Modifications:
+    - target: {fileID: 3560113589947138538, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
+      propertyPath: m_text
+      value: 83.1 M
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560113589947138539, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 108
+      objectReference: {fileID: 0}
     - target: {fileID: 3560113590624506080, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3955,12 +3979,11 @@ MonoBehaviour:
   drafteeNumber3InputField: {fileID: 277921786}
   drafteeNumber4InputField: {fileID: 68367283}
   setUpText: {fileID: 2131971908}
-  drafteePanel: {fileID: 3560113590624506081, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
-  drafteePanelConatiner: {fileID: 157531798}
   drafteePanel1: {fileID: 1213445779}
   drafteePanel2: {fileID: 1804019783}
   drafteePanel3: {fileID: 1386488778}
   drafteePanel4: {fileID: 99789775}
+  selectionManager: {fileID: 1413694493}
 --- !u!1 &1386488778 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3560113590624506081, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
@@ -4166,6 +4189,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1413694491}
   - component: {fileID: 1413694492}
+  - component: {fileID: 1413694493}
   m_Layer: 0
   m_Name: SelectionManger
   m_TagString: Untagged
@@ -4247,6 +4271,19 @@ MonoBehaviour:
   constructorBackgroundColor: {fileID: 1402260076}
   amountOfSpin: 20
   timeBeforeNextSpin: 0.75
+--- !u!114 &1413694493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413694489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249a36258ad395a418de555dce7443ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiManager: {fileID: 1332097870}
 --- !u!1 &1484957139
 GameObject:
   m_ObjectHideFlags: 0
@@ -4323,6 +4360,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 157531802}
     m_Modifications:
+    - target: {fileID: 3560113589947138538, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
+      propertyPath: m_text
+      value: '83.1 M
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3560113589947138539, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 100.00001
+      objectReference: {fileID: 0}
     - target: {fileID: 3560113590624506080, guid: f661d6dccf7c23a4eb2e389ae190e92a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -5815,7 +5862,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -100, y: 0.000024796}
+  m_AnchoredPosition: {x: -100, y: -59}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2131971908
