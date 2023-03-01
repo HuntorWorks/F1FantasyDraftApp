@@ -6,7 +6,7 @@ using TMPro;
 using UnityEngine;
 using Color = UnityEngine.Color;
 
-public class SelectionDisplayPanel : MonoBehaviour
+public class DriverDisplayPanel : MonoBehaviour
 {
 
     [SerializeField] private List<DriverSO> driverSoList;
