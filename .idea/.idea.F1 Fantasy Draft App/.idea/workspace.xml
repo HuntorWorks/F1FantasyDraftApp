@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="Added F1 Logo to screen">
+    <list default="true" id="b0c18ea5-4901-41b6-a61a-b97cf2b162ed" name="Changes" comment="Added F1 Theme tune to play on repeat.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.F1 Fantasy Draft App/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DrafteePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SelectionDisplayPanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SelectionDisplayPanel.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +15,11 @@
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scenes/SelectionScreen.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/Draftee.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Draftee.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/Draftee.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Development/Projects/F1 Fantasy Draft App/F1 Fantasy Draft App/Assets/Scripts/DrafteePanel.cs" root0="SKIP_HIGHLIGHTING" />
@@ -103,7 +104,7 @@
       <workItem from="1677528344274" duration="1152000" />
       <workItem from="1677665090955" duration="6064000" />
       <workItem from="1677672692065" duration="7097000" />
-      <workItem from="1677680593177" duration="25020000" />
+      <workItem from="1677680593177" duration="26220000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1677528468773</created>
@@ -189,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1677712721140</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Refactored some code, removed unused method declarations and added red color to the drafteeSelectionValue if above 100m.">
+      <created>1677713534338</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1677713534338</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added F1 Theme tune to play on repeat.">
+      <created>1677714475257</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1677714475257</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,7 +239,9 @@
     <MESSAGE value="Added constructor to have the same functionality as the drivers. They now show up on drafteePanel and accumulate to the overall value of the team." />
     <MESSAGE value="Added selected constructor and driver to draftee personal lists - Added a cautious 'yield return new WaitForSeconds(1f)' before removing the selected from the correct list, to ensure any process if any is finished as was running into an 'ObjectDisposedException' but apparently is only UnityEditor which wont be around in the build." />
     <MESSAGE value="Added F1 Logo to screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added F1 Logo to screen" />
+    <MESSAGE value="Refactored some code, removed unused method declarations and added red color to the drafteeSelectionValue if above 100m." />
+    <MESSAGE value="Added F1 Theme tune to play on repeat." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added F1 Theme tune to play on repeat." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -234,10 +251,10 @@
           <line>259</line>
           <properties documentPath="C:\Development\Projects\F1 Fantasy Draft App\F1 Fantasy Draft App\Assets\Scripts\UIManager.cs" initialLine="184" containingFunctionPresentation="method 'ShowDraftee3InputField'">
             <startOffsets>
-              <option value="10321" />
+              <option value="10325" />
             </startOffsets>
             <endOffsets>
-              <option value="10322" />
+              <option value="10326" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -247,10 +264,10 @@
           <line>263</line>
           <properties documentPath="C:\Development\Projects\F1 Fantasy Draft App\F1 Fantasy Draft App\Assets\Scripts\UIManager.cs" initialLine="188" containingFunctionPresentation="method 'HideDraftee3InputField'">
             <startOffsets>
-              <option value="10477" />
+              <option value="10481" />
             </startOffsets>
             <endOffsets>
-              <option value="10478" />
+              <option value="10482" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
